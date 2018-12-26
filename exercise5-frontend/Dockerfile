@@ -8,4 +8,4 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 RUN apt-get install -y nodejs
 RUN npm install
 RUN npm build
-CMD ["npm", "start"]
+CMD ["sh", "-c", "API_URL=http://localhost:8000 npm start"]
