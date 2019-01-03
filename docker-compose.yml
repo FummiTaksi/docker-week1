@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+    backend:
+      build: ./exercise6-backend
+      ports:
+        - 8000:8000
+    frontend:
+      build: ./exercise5-frontend
+      ports:
+        - 5000:5000
