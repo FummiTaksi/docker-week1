@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
 RUN apt-get install -y nodejs
 RUN npm install
-CMD ["sh", "-c","FRONT_URL=http://localhost:5000 npm start"]
+CMD ["sh", "-c","FRONT_URL=http://localhost:5000 REDIS=redis REDIS_PORT=6379 npm start"]
