@@ -1,0 +1,12 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: database
+    - plan: heroku-redis
+      as: redis
+  config:
+    S3_BUCKET: my-example-bucket
+build:
+  docker:
+    frontend: exercise5-frontend/Dockerfile
+    backend: exercise6-backend/Dockerfile
